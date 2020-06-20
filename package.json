@@ -1,0 +1,31 @@
+{
+  "name": "newweddingform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gayathrichinnapillai/Newweddingform.git"
+  },
+  "author": "gayathri <gayathrichinnapillaiilt@gmail.com> (https://github.com/Gayathrichinnapillai/Nodejsprj.git)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gayathrichinnapillai/Newweddingform/issues"
+  },
+  "homepage": "https://github.com/Gayathrichinnapillai/Newweddingform#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "http-errors": "^1.7.3",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0"
+  }
+}
