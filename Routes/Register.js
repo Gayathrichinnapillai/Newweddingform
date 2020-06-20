@@ -6,7 +6,7 @@ const morgan = require('morgan');
 var router=express.Router();
 const Register=require('../Models/Registration');
 const { request } = require('../app');
-//var verifytoken=require('../Routes/Verifytoken');
+var verifytoken=require('../Routes/Verifytoken');
 const fs = require('fs');
 // enable files upload
 router.use(fileUpload({
@@ -16,7 +16,7 @@ router.use(fileUpload({
     },
 }));
 
-router.get('/',function(req,res,next){ 
+router.get('/',verifytoken,function(req,res,next){ 
     Register.find()
     .then(Register => {
         res.send(Register);
@@ -27,7 +27,7 @@ router.get('/',function(req,res,next){
     });
 }); 
 
-router.post('/',async (req,res)=>{ 
+router.post('/',verifytoken,async (req,res)=>{ 
     // Request validation
     if(!req.body) {
         return res.status(400).send({
@@ -285,7 +285,7 @@ router.post('/',async (req,res)=>{
         }             
     }
 });
-router.put('/:id',function(req,res,next){ 
+router.put('/:id',verifytoken,function(req,res,next){ 
     // Validate Request
     if(!req.body) {
         return res.status(400).send({
