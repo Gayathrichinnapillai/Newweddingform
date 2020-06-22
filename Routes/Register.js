@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 var router=express.Router();
 const Register=require('../Models/Registration');
-const { request } = require('../app');
+//const { request } = require('../app');
 var verifytoken=require('../Routes/Verifytoken');
 const fs = require('fs');
 // enable files upload
@@ -321,7 +321,6 @@ router.put('/:id',verifytoken,function(req,res,next){
      var image25=dept.MarriageReceipt;
     
      const reg=req.body;
-     console.log(reg);
      Register.findById(id)
      .then(data1 => {
        if (!data1)

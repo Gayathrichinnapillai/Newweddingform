@@ -7,7 +7,6 @@ const bcrypt = require('bcryptjs');
 
 
 router.get('/',function(req,res,next){ 
-    console.log("tets");
     Useregister.find()
     .then(Useregister => {
         res.send(Useregister);
