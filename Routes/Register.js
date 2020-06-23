@@ -41,7 +41,9 @@ router.post('/',verifytoken,async (req,res)=>{
     
         //var filetest=req.files.avatar;
         try {
-            let dept =req.files;
+            if(req.files)
+            {
+            let dept =req.files;           
            var image1=dept.PassportSizePhotograph;
            var image2=dept.BridePassportSizePhotograph;
            var image3=dept.Passport;
@@ -67,7 +69,6 @@ router.post('/',verifytoken,async (req,res)=>{
             var image23=dept.Moreattach;
             var image24=dept.Invitation;
             var image25=dept.MarriageReceipt;
-           console.log(image1);
             if(!image1) {            
                 reg.PassportSizePhotograph =null;
             }
@@ -271,7 +272,7 @@ router.post('/',verifytoken,async (req,res)=>{
                 image25.mv('./Uploads/' + image25.name); 
                 reg.MarriageReceipt =image25.name;
              }
-
+            }
             reg.save()
             .then(data => {
                 res.send(data);
@@ -586,7 +587,6 @@ router.put('/:id',verifytoken,function(req,res,next){
         reg.MarriageReceipt =image25.name;
      }
      
-console.log(reg);
     Register.findByIdAndUpdate(id,reg, { useFindAndModify: false })     
       .then(data => {
         if (!data) {
