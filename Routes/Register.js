@@ -15,6 +15,7 @@ router.use(fileUpload({
         fileSize: 2 * 1024 * 1024 * 1024 //2MB max file(s) size
     },
 }));
+var rnumber=Math.floor(Math.random()*100000+1);
 
 router.get('/',verifytoken,function(req,res,next){ 
     Register.find()
@@ -36,9 +37,7 @@ router.post('/',verifytoken,async (req,res)=>{
     }   
     const reg = new Register(req.body)
     {
-
-     //let avatar;
-    
+     
         //var filetest=req.files.avatar;
         try {
             if(req.files)
@@ -74,160 +73,160 @@ router.post('/',verifytoken,async (req,res)=>{
             }
             else
             {         
-                image1.mv('./Uploads/' + image1.name); 
-                reg.PassportSizePhotograph =image1.name;
+                image1.mv('./Uploads/' + rnumber+image1.name); 
+                reg.PassportSizePhotograph =rnumber+image1.name;
              }
              if(!image2) {            
                 reg.BridePassportSizePhotograph =null;
             }
             else
             {         
-                image2.mv('./Uploads/' + image2.name); 
-                reg.BridePassportSizePhotograph =image2.name;
+                image2.mv('./Uploads/' + rnumber+image2.name); 
+                reg.BridePassportSizePhotograph =rnumber+image2.name;
              }
              if(!image3) {            
                 reg.Passport =null;
             }
             else
             {         
-                image3.mv('./Uploads/' + image3.name); 
-                reg.Passport =image3.name;
+                image3.mv('./Uploads/' + rnumber+image3.name); 
+                reg.Passport =rnumber+image3.name;
              }
              if(!image4) {            
                 reg.BridePassport =null;
             }
             else
             {         
-                image4.mv('./Uploads/' + image4.name); 
-                reg.BridePassport =image4.name;
+                image4.mv('./Uploads/' + rnumber+image4.name); 
+                reg.BridePassport =rnumber+image4.name;
              }
              if(!image5) {            
                 reg.Marksheet =null;
             }
             else
             {         
-                image5.mv('./Uploads/' + image5.name); 
-                reg.Marksheet =image5.name;
+                image5.mv('./Uploads/' + rnumber+image5.name); 
+                reg.Marksheet =rnumber+image5.name;
              }
              if(!image6) {            
                 reg.BrideMarksheet =null;
             }
             else
             {         
-                image6.mv('./Uploads/' + image6.name); 
-                reg.BrideMarksheet =image6.name;
+                image6.mv('./Uploads/' + rnumber+image6.name); 
+                reg.BrideMarksheet =rnumber+image6.name;
              }
              if(!image7) {            
                 reg.RationCard =null;
             }
             else
             {         
-                image7.mv('./Uploads/' + image7.name); 
-                reg.BrideRationCard =image7.name;
+                image7.mv('./Uploads/' + rnumber+image7.name); 
+                reg.BrideRationCard =rnumber+image7.name;
              }
              if(!image8) {            
                 reg.BrideRationCard =null;
             }
             else
             {         
-                image8.mv('./Uploads/' + image8.name); 
-                reg.BrideRationCard =image8.name;
+                image8.mv('./Uploads/' + rnumber+image8.name); 
+                reg.BrideRationCard =rnumber+image8.name;
              }
              if(!image9) {            
                 reg.Aadharcard =null;
             }
             else
             {         
-                image9.mv('./Uploads/' + image9.name); 
-                reg.Aadharcard =image9.name;
+                image9.mv('./Uploads/' + rnumber+image9.name); 
+                reg.Aadharcard =rnumber+image9.name;
              }
              if(!image10) {            
                 reg.BrideAadharcard =null;
             }
             else
             {         
-                image10.mv('./Uploads/' + image10.name); 
-                reg.BrideAadharcard =image10.name;
+                image10.mv('./Uploads/' + rnumber+image10.name); 
+                reg.BrideAadharcard =rnumber+image10.name;
              }
              if(!image11) {            
                 reg.Voterid =null;
             }
             else
             {         
-                image11.mv('./Uploads/' + image11.name); 
-                reg.Voterid =image11.name;
+                image11.mv('./Uploads/' + rnumber+image11.name); 
+                reg.Voterid =rnumber+image11.name;
              }
              if(!image12) {            
                 reg.BrideVoterid =null;
             }
             else
             {         
-                image12.mv('./Uploads/' + image12.name); 
-                reg.BrideVoterid =image12.name;
+                image12.mv('./Uploads/' + rnumber+image12.name); 
+                reg.BrideVoterid =rnumber+image12.name;
              }
              if(!image13) {            
                 reg.DrivingLicence =null;
             }
             else
             {         
-                image13.mv('./Uploads/' + image13.name); 
-                reg.DrivingLicence =image13.name;
+                image13.mv('./Uploads/' + rnumber+image13.name); 
+                reg.DrivingLicence =rnumber+image13.name;
              }
              if(!image14) {            
                 reg.BrideDrivingLicence =null;
             }
             else
             {         
-                image14.mv('./Uploads/' + image14.name); 
-                reg.BrideDrivingLicence =image14.name;
+                image14.mv('./Uploads/' + rnumber+image14.name); 
+                reg.BrideDrivingLicence =rnumber+image14.name;
              }
              if(!image15) {            
                 reg.DivorceCopy =null;
             }
             else
             {         
-                image15.mv('./Uploads/' + image15.name); 
-                reg.DivorceCopy =image15.name;
+                image15.mv('./Uploads/' + rnumber+image15.name); 
+                reg.DivorceCopy =rnumber+image15.name;
              }
              if(!image22) {            
                 reg.BrideDivorceCopy =null;
             }
             else
             {         
-                image22.mv('./Uploads/' + image22.name); 
-                reg.BrideDivorceCopy =image22.name;
+                image22.mv('./Uploads/' + rnumber+image22.name); 
+                reg.BrideDivorceCopy =rnumber+image22.name;
              }
              if(!image16) {            
                 reg.FirstMarriageCertificate =null;
             }
             else
             {         
-                image16.mv('./Uploads/' + image16.name); 
-                reg.FirstMarriageCertificate =image16.name;
+                image16.mv('./Uploads/' + rnumber+image16.name); 
+                reg.FirstMarriageCertificate =rnumber+image16.name;
              }
              if(!image17) {            
                 reg.BrideFirstMarriageCertificate =null;
             }
             else
             {         
-                image17.mv('./Uploads/' + image17.name); 
-                reg.BrideFirstMarriageCertificate =image17.name;
+                image17.mv('./Uploads/' + rnumber+image17.name); 
+                reg.BrideFirstMarriageCertificate =rnumber+image17.name;
              }
              if(!image18) {            
                 reg.SpouseDeathCertificate =null;
             }
             else
             {         
-                image18.mv('./Uploads/' + image18.name); 
-                reg.SpouseDeathCertificate =image18.name;
+                image18.mv('./Uploads/' + rnumber+image18.name); 
+                reg.SpouseDeathCertificate =rnumber+image18.name;
              }
              if(!image19) {            
                 reg.BrideSpouseDeathCertificate =null;
             }
             else
             {         
-                image19.mv('./Uploads/' + image19.name); 
-                reg.BrideSpouseDeathCertificate =image19.name;
+                image19.mv('./Uploads/' + rnumber+image19.name); 
+                reg.BrideSpouseDeathCertificate =rnumber+image19.name;
              }
 
              if(!image20) {            
@@ -235,8 +234,8 @@ router.post('/',verifytoken,async (req,res)=>{
             }
             else
             {         
-                image20.mv('./Uploads/' + image20.name); 
-                reg.SingleStatusCertificate =image20.name;
+                image20.mv('./Uploads/' + rnumber+image20.name); 
+                reg.SingleStatusCertificate =rnumber+image20.name;
              }
 
              if(!image21) {            
@@ -244,8 +243,8 @@ router.post('/',verifytoken,async (req,res)=>{
             }
             else
             {         
-                image21.mv('./Uploads/' + image21.name); 
-                reg.BrideSingleStatusCertificate =image21.name;
+                image21.mv('./Uploads/' + rnumber+image21.name); 
+                reg.BrideSingleStatusCertificate =rnumber+image21.name;
              }
 
              if(!image23) {            
@@ -253,26 +252,27 @@ router.post('/',verifytoken,async (req,res)=>{
             }
             else
             {         
-                image23.mv('./Uploads/' + image23.name); 
-                reg.Moreattach =image23.name;
+                image23.mv('./Uploads/' + rnumber+image23.name); 
+                reg.Moreattach =rnumber+image23.name;
              }
              if(!image24) {            
                 reg.Invitation =null;
             }
             else
             {         
-                image24.mv('./Uploads/' + image24.name); 
-                reg.Invitation =image24.name;
+                image24.mv('./Uploads/' + rnumber+image24.name); 
+                reg.Invitation =rnumber+image24.name;
              }
              if(!image25) {            
                 reg.MarriageReceipt =null;
             }
             else
             {         
-                image25.mv('./Uploads/' + image25.name); 
-                reg.MarriageReceipt =image25.name;
+                image25.mv('./Uploads/' + rnumber+image25.name); 
+                reg.MarriageReceipt =rnumber+image25.name;
              }
             }
+            console.log(req.body);
             reg.save()
             .then(data => {
                 res.send(data);
@@ -336,8 +336,8 @@ router.put('/:id',verifytoken,function(req,res,next){
         fs.unlink('Uploads/'+data1.PassportSizePhotograph, (err) => {
             if (err) res.status(404).send({ message: "Image not found"});
           });     
-         image1.mv('./Uploads/' + image1.name); 
-         reg.PassportSizePhotograph =image1.name;
+         image1.mv('./Uploads/' + rnumber+image1.name); 
+         reg.PassportSizePhotograph =rnumber+image1.name;
       }
       if(!image2) {            
         reg.BridePassportSizePhotograph =data1.BridePassportSizePhotograph;
@@ -347,8 +347,8 @@ router.put('/:id',verifytoken,function(req,res,next){
         fs.unlink('Uploads/'+data1.BridePassportSizePhotograph, (err) => {
             if (err) res.status(404).send({ message: "Image not found"});
           });   
-        image2.mv('./Uploads/' + image2.name); 
-        reg.BridePassportSizePhotograph =image2.name;
+        image2.mv('./Uploads/' + rnumber+image2.name); 
+        reg.BridePassportSizePhotograph =rnumber+image2.name;
      }
      if(!image3) {            
         reg.Passport =data1.Passport;
@@ -358,8 +358,8 @@ router.put('/:id',verifytoken,function(req,res,next){
         fs.unlink('Uploads/'+data1.Passport, (err) => {
             if (err)  res.status(404).send({ message: "Image not found"});
           });        
-        image3.mv('./Uploads/' + image3.name); 
-        reg.Passport =image3.name;
+        image3.mv('./Uploads/' + rnumber+image3.name); 
+        reg.Passport =rnumber+image3.name;
      }
      if(!image4) {            
         reg.BridePassport =data1.BridePassport;
@@ -369,8 +369,8 @@ router.put('/:id',verifytoken,function(req,res,next){
         fs.unlink('Uploads/'+data1.BridePassport, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
       });  
-        image4.mv('./Uploads/' + image4.name); 
-        reg.BridePassport =image4.name;
+        image4.mv('./Uploads/' + rnumber+image4.name); 
+        reg.BridePassport =rnumber+image4.name;
      }
      if(!image5) {            
         reg.Marksheet =data1.Marksheet;
@@ -379,8 +379,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {   fs.unlink('Uploads/'+data1.Marksheet, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
       }); 
-        image5.mv('./Uploads/' + image5.name); 
-        reg.Marksheet =image5.name;
+        image5.mv('./Uploads/' + rnumber+image5.name); 
+        reg.Marksheet =rnumber+image5.name;
      }
      if(!image6) {            
         reg.BrideMarksheet =data1.BrideMarksheet;
@@ -390,8 +390,8 @@ router.put('/:id',verifytoken,function(req,res,next){
         fs.unlink('Uploads/'+data1.BrideMarksheet, (err) => {
             if (err) res.status(404).send({ message: "Image not found"});
           });  
-        image6.mv('./Uploads/' + image6.name); 
-        reg.BrideMarksheet =image6.name;
+        image6.mv('./Uploads/' + rnumber+image6.name); 
+        reg.BrideMarksheet =rnumber+image6.name;
      }
      if(!image7) {            
         reg.RationCard =data1.RationCard;
@@ -400,8 +400,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {    fs.unlink('Uploads/'+data1.RationCard, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
       });    
-        image7.mv('./Uploads/' + image7.name); 
-        reg.BrideRationCard =image7.name;
+        image7.mv('./Uploads/' + rnumber+image7.name); 
+        reg.BrideRationCard =rnumber+image7.name;
      }
      if(!image8) {            
         reg.BrideRationCard =data1.BrideRationCard;
@@ -410,8 +410,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {       fs.unlink('Uploads/'+data1.BrideRationCard, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
       });   
-        image8.mv('./Uploads/' + image8.name); 
-        reg.BrideRationCard =image8.name;
+        image8.mv('./Uploads/' + rnumber+image8.name); 
+        reg.BrideRationCard =rnumber+image8.name;
      }
      if(!image9) {            
         reg.Aadharcard =data1.Aadharcard;
@@ -420,8 +420,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {   fs.unlink('Uploads/'+data1.Aadharcard, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
       });       
-        image9.mv('./Uploads/' + image9.name); 
-        reg.Aadharcard =image9.name;
+        image9.mv('./Uploads/' + rnumber+image9.name); 
+        reg.Aadharcard =rnumber+image9.name;
      }
      if(!image10) {            
         reg.BrideAadharcard =data1.BrideAadharcard;
@@ -430,8 +430,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {   fs.unlink('Uploads/'+data1.BrideAadharcard, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });
-        image10.mv('./Uploads/' + image10.name); 
-        reg.BrideAadharcard =image10.name;
+        image10.mv('./Uploads/' + rnumber+image10.name); 
+        reg.BrideAadharcard =rnumber+image10.name;
      }
      if(!image11) {            
         reg.Voterid =data1.Voterid;
@@ -440,8 +440,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {     fs.unlink('Uploads/'+data1.Voterid, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });     
-        image11.mv('./Uploads/' + image11.name); 
-        reg.Voterid =image11.name;
+        image11.mv('./Uploads/' + rnumber+image11.name); 
+        reg.Voterid =rnumber+image11.name;
      }
      if(!image12) {            
         reg.BrideVoterid =data1.BrideVoterid;
@@ -450,8 +450,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {      fs.unlink('Uploads/'+data1.BrideVoterid, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });    
-        image12.mv('./Uploads/' + image12.name); 
-        reg.BrideVoterid =image12.name;
+        image12.mv('./Uploads/' + rnumber+image12.name); 
+        reg.BrideVoterid =rnumber+image12.name;
      }
      if(!image13) {            
         reg.DrivingLicence =data1.DrivingLicence;
@@ -460,8 +460,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {    fs.unlink('Uploads/'+data1.DrivingLicence, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });    
-        image13.mv('./Uploads/' + image13.name); 
-        reg.DrivingLicence =image13.name;
+        image13.mv('./Uploads/' + rnumber+image13.name); 
+        reg.DrivingLicence =rnumber+image13.name;
      }
      if(!image14) {            
         reg.BrideDrivingLicence =data1.BrideDrivingLicence;
@@ -470,8 +470,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {         fs.unlink('Uploads/'+data1.BrideDrivingLicence, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         }); 
-        image14.mv('./Uploads/' + image14.name); 
-        reg.BrideDrivingLicence =image14.name;
+        image14.mv('./Uploads/' + rnumber+image14.name); 
+        reg.BrideDrivingLicence =rnumber+image14.name;
      }
      if(!image15) {            
         reg.DivorceCopy =data1.DivorceCopy;
@@ -480,8 +480,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {     fs.unlink('Uploads/'+data1.DivorceCopy, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });      
-        image15.mv('./Uploads/' + image15.name); 
-        reg.DivorceCopy =image15.name;
+        image15.mv('./Uploads/' + rnumber+image15.name); 
+        reg.DivorceCopy =rnumber+image15.name;
      }
      if(!image22) {            
         reg.BrideDivorceCopy =data1.BrideDivorceCopy;
@@ -490,8 +490,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {      fs.unlink('Uploads/'+data1.BrideDivorceCopy, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });     
-        image22.mv('./Uploads/' + image22.name); 
-        reg.BrideDivorceCopy =image22.name;
+        image22.mv('./Uploads/' + rnumber+image22.name); 
+        reg.BrideDivorceCopy =rnumber+image22.name;
      }
      if(!image16) {            
         reg.FirstMarriageCertificate =data1.FirstMarriageCertificate;
@@ -500,8 +500,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {     fs.unlink('Uploads/'+data1.FirstMarriageCertificate, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });      
-        image16.mv('./Uploads/' + image16.name); 
-        reg.FirstMarriageCertificate =image16.name;
+        image16.mv('./Uploads/' + rnumber+image16.name); 
+        reg.FirstMarriageCertificate =rnumber+image16.name;
      }
      if(!image17) {            
         reg.BrideFirstMarriageCertificate =data1.BrideFirstMarriageCertificate;
@@ -510,8 +510,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {    fs.unlink('Uploads/'+data1.BrideFirstMarriageCertificate, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });       
-        image17.mv('./Uploads/' + image17.name); 
-        reg.BrideFirstMarriageCertificate =image17.name;
+        image17.mv('./Uploads/' + rnumber+image17.name); 
+        reg.BrideFirstMarriageCertificate =rnumber+image17.name;
      }
      if(!image18) {            
         reg.SpouseDeathCertificate =data1.SpouseDeathCertificate;
@@ -520,8 +520,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {   fs.unlink('Uploads/'+data1.SpouseDeathCertificate, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });    
-        image18.mv('./Uploads/' + image18.name); 
-        reg.SpouseDeathCertificate =image18.name;
+        image18.mv('./Uploads/' + rnumber+image18.name); 
+        reg.SpouseDeathCertificate =rnumber+image18.name;
      }
      if(!image19) {            
         reg.BrideSpouseDeathCertificate =data1.BrideSpouseDeathCertificate;
@@ -530,8 +530,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {    fs.unlink('Uploads/'+data1.BrideSpouseDeathCertificate, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });  
-        image19.mv('./Uploads/' + image19.name); 
-        reg.BrideSpouseDeathCertificate =image19.name;
+        image19.mv('./Uploads/' + rnumber+image19.name); 
+        reg.BrideSpouseDeathCertificate =rnumber+image19.name;
      }
 
      if(!image20) {            
@@ -541,8 +541,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {     fs.unlink('Uploads/'+data1.SingleStatusCertificate, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });      
-        image20.mv('./Uploads/' + image20.name); 
-        reg.SingleStatusCertificate =image20.name;
+        image20.mv('./Uploads/' + rnumber+image20.name); 
+        reg.SingleStatusCertificate =rnumber+image20.name;
      }
 
      if(!image21) {            
@@ -552,8 +552,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {         fs.unlink('Uploads/'+data1.BrideSingleStatusCertificate, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });
-        image21.mv('./Uploads/' + image21.name); 
-        reg.BrideSingleStatusCertificate =image21.name;
+        image21.mv('./Uploads/' + rnumber+image21.name); 
+        reg.BrideSingleStatusCertificate =rnumber+image21.name;
      }
 
      if(!image23) {            
@@ -563,8 +563,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {   fs.unlink('Uploads/'+data1.Moreattach, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });      
-        image23.mv('./Uploads/' + image23.name); 
-        reg.Moreattach =image23.name;
+        image23.mv('./Uploads/' + rnumber+image23.name); 
+        reg.Moreattach =rnumber+image23.name;
      }
      if(!image24) {            
         reg.Invitation =data1.Invitation;
@@ -573,8 +573,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {    fs.unlink('Uploads/'+data1.Invitation, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });   
-        image24.mv('./Uploads/' + image24.name); 
-        reg.Invitation =image24.name;
+        image24.mv('./Uploads/' + rnumber+image24.name); 
+        reg.Invitation =rnumber+image24.name;
      }
      if(!image25) {            
         reg.MarriageReceipt =data1.MarriageReceipt;
@@ -583,8 +583,8 @@ router.put('/:id',verifytoken,function(req,res,next){
     {   fs.unlink('Uploads/'+data1.MarriageReceipt, (err) => {
         if (err) res.status(404).send({ message: "Image not found"});
         });
-        image25.mv('./Uploads/' + image25.name); 
-        reg.MarriageReceipt =image25.name;
+        image25.mv('./Uploads/' + rnumber+image25.name); 
+        reg.MarriageReceipt =rnumber+image25.name;
      }
      
     Register.findByIdAndUpdate(id,reg, { useFindAndModify: false })     
