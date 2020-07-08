@@ -83,6 +83,8 @@ router.post('/authenticate',function(req,res,next)
         result.response_code="200";
         result.response_message="success";
         result.token = token;
+        result.firstname=user[0].Firstname;
+        result.lastname=user[0].Lastname;
         res.send(result);       
     }
     else
